@@ -28,13 +28,14 @@
 
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     main {
-      text-align: center;
+      text-align: left;
       padding: 40px 24px;
       max-width: 700px;
+      margin-left: clamp(40px, 8vw, 140px);
     }
 
     h1 {
@@ -60,6 +61,18 @@
       text-decoration: underline;
       text-underline-offset: 4px;
     }
+    @media (max-width: 700px) {
+      body {
+        justify-content: center;
+        background-position: 60% center;
+      }
+    
+      main {
+        margin-left: 0;
+        text-align: center;
+        padding: 32px 24px;
+      }
+    }
   </style>
 </head>
 
@@ -68,12 +81,12 @@
     <h1>Pretend Fires</h1>
 
     <div class="subtitle">
-      New music project by John Steen in Austin, Texas
+      Music project by John Steen in Austin, Texas
     </div>
 
     <div class="release">
       <strong>Die Alive</strong><br>
-      Coming August 28
+      Debut single coming August 28
     </div>
 
     <div>
